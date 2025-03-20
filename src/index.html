@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: transparent;
+            user-select: none;
+            -webkit-app-region: drag;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        #time {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 10px 0;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            -webkit-app-region: no-drag;
+        }
+        
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            -webkit-app-region: no-drag;
+        }
+        
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        button:active {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        #togglePin {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            -webkit-app-region: no-drag;
+        }
+        
+        #togglePin:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <button id="togglePin">📌</button>
+    <div class="container">
+        <div id="time">00:00:00</div>
+        <div class="controls">
+            <button id="startStop">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="../dist/renderer.js"></script>
+</body>
+</html> 
